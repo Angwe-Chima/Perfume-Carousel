@@ -1,0 +1,182 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cursive2: 'Dancing Script', cursive;
+    --cursive : 'Lobster', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/hero.jpg);
+    background-position: center;
+    background-size: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container{
+    background-color: white;
+    width: 50%;
+    min-width: 700px;
+    max-width: 800px;
+    max-height: 450px;
+    height: 60%;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+    display: flex;
+}
+
+.sec-1{
+    width: 50%;
+    height: 100%;
+}
+
+.sec-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+    filter:grayscale(10);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.sec-1 img:hover{
+    filter:grayscale(0);
+    filter: brightness(130%);
+}
+
+.sec-2{
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.sec-2 P:nth-child(1){
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-family: var(--cursive);
+}
+.sec-2 h1{
+    font-family: sans-serif;
+    font-size: 35px;
+    padding: 5% 0%;
+}
+
+.sec-2 P:nth-child(3){
+    font-family: var(--cursive);
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    line-height: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 80%;
+    padding: 2% 0%;
+}
+.price-div h1{
+    color: green;
+    font-size: 30px;
+    font-weight:800;
+}
+.price-div p{
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: bolder;
+    animation: line 1s infinite 1s;
+}
+
+@keyframes line {
+    0%,100%{text-decoration: line-through;
+    }
+    50%{text-decoration: none;}
+}
+
+
+.container button{
+    padding: 15px 35px;
+    border: none;
+    background-color:rgb(69, 68, 68);
+    border-radius: 7px;
+    color: white;
+    font-size:large;
+    transition: 0.4s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button:hover{
+    background-color:black;
+}
+
+.control{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    border-radius: 0px 0px 5px 5px;
+    margin: 1%;
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.control button{
+    padding: 1% 5%;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.load{
+    width: 250px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    top: 20%;
+    left: 5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.load span{
+   background-color: lime;
+   height: 10px; 
+   z-index: 2;
+   border-radius: 5px;
+}
+
+
+
+/* Styles for screens with a maximum width of 600 pixels */
+/* @media screen and (max-width: 750px) {
+ 
+  }
+   */
